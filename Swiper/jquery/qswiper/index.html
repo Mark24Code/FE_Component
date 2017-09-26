@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./static/jquery-1.4.2.min.js"></script>
+    <title>图片切换轮播</title>
+    <style>
+    body,
+    ul,
+    span,
+    li,
+    p {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .wrapper {
+        float: left;
+        width: 785px;
+        height: 413px;
+    }
+    /* qswiper */
+
+    .qswiper {
+        width: 785px;
+        height: 413px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .qswiper ul {
+        height: 413px;
+        position: absolute;
+    }
+
+    .qswiper ul li {
+        float: left;
+        width: 785px;
+        height: 413px;
+        overflow: hidden;
+        position: relative;
+        background: #000;
+    }
+
+    .qswiper ul li div {
+        position: absolute;
+        overflow: hidden;
+    }
+
+    .qswiper .qswiper-btnBg {
+        position: absolute;
+        width: 785px;
+        height: 40px;
+        left: 0;
+        bottom: 0;
+        background: #000;
+    }
+
+    .qswiper .qswiper-title {
+        position: absolute;
+        width: 545px;
+        height: 40px;
+        left: 0;
+        bottom: 0;
+        text-align: left;
+        line-height: 40px;
+        padding-left: 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .qswiper .qswiper-btn {
+        position: absolute;
+        width: 240px;
+        height: 10px;
+        right: 30px;
+        bottom: 10px;
+        text-align: right;
+    }
+
+    .qswiper .qswiper-btn span {
+        display: inline-block;
+        _display: inline;
+        _zoom: 1;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        _font-size: 0;
+        margin-left: 5px;
+        cursor: pointer;
+        background: #fff;
+    }
+
+    .qswiper .qswiper-btn span.on {
+        background: #fff;
+    }
+
+    .qswiper .qswiper-pre {
+        left: 0;
+    }
+
+    .qswiper .qswiper-next {
+        right: 0;
+        background-position: right top;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="qswiper" class="qswiper">
+            <ul>
+                <li>
+                    <a href="#"><img src="./static/13_03.jpg" alt="焦点图效果下载1"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./static/13_04.jpg" alt="焦点图效果下载2"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./static/13_05.jpg" alt="焦点图效果下载3"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./static/13_03.jpg" alt="焦点图效果下载4"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./static/13_04.jpg" alt="焦点图效果下载5"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./qswiper.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $("#qswiper").$qswiper({
+            'el': "#qswiper",
+            'interval': 3000 //播放间隔 ms
+        });
+    });
+    </script>
+</body>
+
+</html>
